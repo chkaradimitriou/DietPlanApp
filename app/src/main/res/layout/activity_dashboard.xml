@@ -26,5 +26,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImgView"
+            android:layout_width="@dimen/dimen_80"
+            android:layout_height="@dimen/dimen_80"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:setUserImage="@{user.userImg}"
+            app:layout_constraintStart_toStartOf="@id/dashboardTitleTxtView"
+            app:layout_constraintTop_toBottomOf="@id/dashboardTitleTxtView"
+            tools:src="@drawable/empty_user_img"/>
+
+        <TextView
+            android:id="@+id/greetingTxtView"
+            style="@style/headline_2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            android:text="@string/welcome"
+            app:layout_constraintStart_toEndOf="@id/userImgView"
+            app:layout_constraintTop_toTopOf="@id/userImgView" />
+
+        <TextView
+            android:id="@+id/usernameTxtView"
+            style="@style/headline_4_italic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:setUserInfo="@{user.username}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/greetingTxtView"
+            app:layout_constraintTop_toBottomOf="@id/greetingTxtView"
+            tools:text="username" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

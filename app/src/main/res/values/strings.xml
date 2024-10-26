@@ -25,6 +25,7 @@
     <!-- Profile Screen-->
     <string name="edit_username">Edit Username</string>
     <string name="profile_error_message">User details not found.</string>
+    <string name="my_stats_btn">My Stats</string>
 
     <!-- Dashboard Screen-->
     <string name="dashboard">Dashboard</string>

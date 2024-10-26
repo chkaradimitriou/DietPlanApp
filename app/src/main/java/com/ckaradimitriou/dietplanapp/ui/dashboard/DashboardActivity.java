@@ -1,5 +1,6 @@
 package com.ckaradimitriou.dietplanapp.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -9,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.ckaradimitriou.dietplanapp.R;
 import com.ckaradimitriou.dietplanapp.databinding.ActivityDashboardBinding;
+import com.ckaradimitriou.dietplanapp.ui.profile.ProfileActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -27,6 +29,11 @@ public class DashboardActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
 
         viewModel = new ViewModelProvider(this).get(DashboardViewModel.class);
+
+        binding.userImgView.setOnClickListener(view -> {
+            Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
 
         viewModel.user.observe(this, user -> {
             if (user != null) {
