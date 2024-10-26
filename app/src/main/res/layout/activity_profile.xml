@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.ckaradimitriou.dietplanapp.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.profile.ProfileActivity">
+
+        <TextView
+            android:id="@+id/profileTxtView"
+            style="@style/headline_2_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20"
+            android:text="@string/my_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImgView"
+            android:layout_width="@dimen/dimen_120"
+            android:layout_height="@dimen/dimen_120"
+            android:layout_marginTop="@dimen/dimen_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileTxtView"
+            tools:src="@mipmap/diet_plan_logo_round" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/editImgView"
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:padding="@dimen/dimen_8"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@id/profileImgView"
+            app:layout_constraintEnd_toEndOf="@id/profileImgView" />
+
+        <TextView
+            android:id="@+id/usernameTxtView"
+            style="@style/headline_2_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:setUserInfo="@{user.username}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileImgView"
+            tools:text="@string/username" />
+
+        <TextView
+            android:id="@+id/userIdTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:setUserInfo="@{user.userId}"
+            android:textSize="@dimen/text_16"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@id/usernameTxtView"
+            app:layout_constraintStart_toStartOf="@id/usernameTxtView"
+            app:layout_constraintTop_toBottomOf="@id/usernameTxtView"
+            tools:text="@string/user_id" />
+
+        <TextView
+            android:id="@+id/userEmailTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:setUserInfo="@{user.email}"
+            android:textSize="@dimen/text_16"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@id/userIdTxtView"
+            app:layout_constraintStart_toStartOf="@id/userIdTxtView"
+            app:layout_constraintTop_toBottomOf="@id/userIdTxtView"
+            tools:text="@string/email" />
+
+        <TextView
+            android:id="@+id/myOrdersBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:background="#efefef"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_12"
+            android:text="@string/my_orders_btn"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="@id/userEmailTxtView"
+            app:layout_constraintTop_toBottomOf="@id/userEmailTxtView" />
+
+        <TextView
+            android:id="@+id/editUsernameBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="#efefef"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_12"
+            android:text="@string/edit_username"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="@id/myOrdersBtn"
+            app:layout_constraintTop_toBottomOf="@id/myOrdersBtn" />
+
+        <Button
+            android:id="@+id/logOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_52"
+            android:layout_marginHorizontal="@dimen/dimen_24"
+            android:layout_marginBottom="@dimen/dimen_12"
+            android:text="@string/log_out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/editUsernameBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

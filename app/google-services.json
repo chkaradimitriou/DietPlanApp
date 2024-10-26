@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "665545199746",
+    "project_id": "diet-plan-app-3c644",
+    "storage_bucket": "diet-plan-app-3c644.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665545199746:android:506207036a8c4968ad249b",
+        "android_client_info": {
+          "package_name": "com.ckaradimitriou.dietplanapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChGJeYZjtI22XKBV017lphqI3hLsFxGtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
