@@ -15,6 +15,7 @@ glide = "4.16.0"
 circleimageview = "3.1.0"
 gson = "2.11.0"
 snacky = "1.1.5"
+retrofit = "2.11.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -31,6 +32,9 @@ glide = { group = "com.github.bumptech.glide", name="glide", version.ref="glide"
 circleimageview = { group="de.hdodenhof", name ="circleimageview", version.ref="circleimageview"}
 gson = { group="com.google.code.gson", name ="gson", version.ref="gson"}
 snacky = { group="com.github.matecode", name ="Snacky", version.ref="snacky"}
+
+retrofit = { group="com.squareup.retrofit2", name ="retrofit", version.ref="retrofit"}
+retrofit-gson = { group="com.squareup.retrofit2", name ="converter-gson", version.ref="retrofit"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

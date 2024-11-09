@@ -45,6 +45,11 @@ public class DashboardActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+        viewModel.recipes.observe(this, recipes -> {
+            //recyclerview, adapter & click listener gia na ta deikseis
+            // https://m.youtube.com/watch?v=DlaSiftrWeA
+        });
     }
 
     @Override
